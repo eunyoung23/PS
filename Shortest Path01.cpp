@@ -1,11 +1,9 @@
 //
-//  Floyd-Warshall.cpp
+//  Shortest Path01.cpp
 //  CodingTest_w
 //
-//  Created by 이은영 on 2021/01/25.
+//  Created by 이은영 on 2021/01/27.
 //
-//점화식에 따라 프로이드 워셜 알고리즘 짜는 법 고민함
-
 /*
 #include <bits/stdc++.h>
 #define INF 1e9
@@ -13,13 +11,14 @@
 using namespace std;
 
 int n,m;
-int graph[501][501];
+int p,q;
+int graph[101][101];
 
 int main(){
     cin>>n>>m;
     
     for(int i=0; i<501; i++){
-        fill(graph[i],graph[i]+501,INF);
+        fill(graph[i],graph[i]+101,INF);
     }
     
     for(int a=1; a<=n; a++){
@@ -29,9 +28,10 @@ int main(){
     }
     
     for(int i=0; i<m; i++){
-        int x,y,z;
-        cin>>x>>y>>z;
-        graph[x][y]=z;
+        int x,y;
+        cin>>x>>y;
+        graph[x][y]=1;
+        graph[y][x]=1;
     }
     
     for(int k=1; k<=n; k++){
@@ -42,17 +42,14 @@ int main(){
         }
     }
     
-    for(int a=1; a<=n; a++){
-        for(int b=1; b<=n; b++){
-            if(graph[a][b]==INF){
-                cout<<"INFINTY"<<" ";
-            }
-            else{
-                cout<<graph[a][b]<<" ";
-            }
-        }
-        cout<<"\n";
+    cin>>p>>q;
+    
+    if(graph[p][q]==INF){
+        cout<<-1<<" ";
+    }else{
+        cout<<graph[1][q]+graph[q][p]<<" ";
     }
+    
     return 0;
 }
 */
