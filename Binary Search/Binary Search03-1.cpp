@@ -5,7 +5,7 @@
 //  Created by 이은영 on 2021/01/22.
 //
 //타겟이 되는 배열은 정렬할 필요가 없음
-/*
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -54,4 +54,4 @@ int main(){
     
     return 0;
 }
- */
+ 
