@@ -1,4 +1,4 @@
-```python
+
 # 구현에서 필요한 함수를 구현해서 할 수도 있고....
 # 필요한 기본적인 패키지를 불러서 사용할 수 있음...
 import re # 정규식을 사용하는데 파이썬에서 사용하는 기본적인 패키지 불러오기
@@ -35,4 +35,4 @@ def solution(files):
 		answer.append(files[i[2]])
 	
 	return answer
-```
+
