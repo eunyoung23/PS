@@ -1,11 +1,11 @@
 def solution(s):
-  answer = 0
+    answer = 0
 
-  words = ["zero","one","two","three","four","five","six","seven","eight","nine"]
+    list = ['zero','one','two','three','four','five','six','seven','eight','nine']
 
-  for i in words:
-    s = s.replace(i,str(words.index(i)))
+    for i in list:
+        s = s.replace(i,str(list.index(i)))
 
-  answer = s
+    answer = int(s)
 
-  return answer
+    return answer
