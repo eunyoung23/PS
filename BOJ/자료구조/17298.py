@@ -1,8 +1,1 @@
-N = int(input())
-num = list(map(int,input().split(" ")))
-answer = list()
-
-for i in range(1,N):
-  stack1 = num[:i]
-  stack2 = num[i:]
-  if stack1.pop() <:
+#이중 for문을 사용했더니 시간 복잡도가 O(N제곱)으로 시간초과 판정이 남ㅠㅠ
