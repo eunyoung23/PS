@@ -21,7 +21,7 @@ for plan in plans:
 			ny = y + dy[i]
 		else:
 			pass
-	# 일단 이동시켜 본 위치의 정보는 nx,ny -> 지동 안이면 진짜 이동 ! / 지도 밖이면 이동을 안함!
+# 일단 이동시켜 본 위치의 정보는 nx,ny -> 지동 안이면 진짜 이동 ! / 지도 밖이면 이동을 안함!
 		if nx < 1 or nx > n or ny < 1 or ny > n :
 			continue
 		else: # 지시 사항대로 이동 시킬 때, 지도 안에 존재하는 경우!!
