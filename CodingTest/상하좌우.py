@@ -14,8 +14,8 @@ dy = [-1,1, 0, 0]
 # 이동하면서,,,, 지도 안이냐 밖이냐 - if문을 써서
 for plan in plans:
 # 어떤 이동 지시 사항인지 찾아보기 : move_types -> dx,dy 순서 정보 같이 활용
-for i in range(len(move_types)):
-if plan == move_types[i]:
+	for i in range(len(move_types)):
+		if plan == move_types[i]:
 # 일단 지시사항대로 이동시켜보기....
 			nx = x + dx[i]
 			ny = y + dy[i]
