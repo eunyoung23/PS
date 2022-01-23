@@ -1,5 +1,6 @@
+# 코테 특강 풀이
 # 기본적인 변수들 선언
-n = 5 # 지도 크기
+n = 5 
 x, y = 1, 1 # 위치에 대한 초기값...(문제에서 1,1에서 항상 시작한다고 함.)
 
 plans = ["R","R","R","U","D","D"] # 이동 지시사항..
@@ -28,3 +29,53 @@ for plan in plans:
 			x = nx
 			y = ny
 print(x,y)
+
+
+#내 풀이(이동시켜본 위치 좌표 확인하는 방법으로 -> 지도 안이면 진짜 이동 / 아니면 이동을 안함!)
+N = int(input())
+x,y=1,1
+move = input().split()
+
+dx = [0,0,-1,1]
+dy = [-1,1,0,0]
+
+for i in move:
+  if i == "L":
+    nx = x+dx[0]
+    ny = y+dy[0]
+  elif i == "R":
+    nx = x+dx[1]
+    ny = y+dy[1]
+  elif i == "U":
+    nx = x+dx[2]
+    ny = y+dy[2]
+  else:
+    nx = x+dx[3]
+    ny = y+dy[3]
+  if nx<1 or ny<1 or nx>N or ny>N:
+    continue
+  x,y = nx,ny
+    
+print(x,y)
+
+#책 풀이
+N = int(input())
+x,y = 1,1
+plans = input().split()
+
+dx = [0,0,-1,1]
+dy = [-1,1,0,0]
+move_types = ['L','R','U','D']
+
+for plan in plans:
+  for i in range(len(move_types)):
+    if plan == move_types[i]:
+      nx = x+dx[i]
+      ny = y+dy[i]
+  if nx<1 or ny<1 or nx>N or ny>N:
+    continue
+  x,y= nx,ny
+
+print(x,y)
+
+
