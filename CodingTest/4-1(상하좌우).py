@@ -1,4 +1,4 @@
-# 코테 특강 풀이
+# 코테 특강 풀이1
 # 기본적인 변수들 선언
 n = 5 
 x, y = 1, 1 # 위치에 대한 초기값...(문제에서 1,1에서 항상 시작한다고 함.)
@@ -28,6 +28,27 @@ for plan in plans:
 		else: # 지시 사항대로 이동 시킬 때, 지도 안에 존재하는 경우!!
 			x = nx
 			y = ny
+print(x,y)
+
+#코테 특강 풀이2 - 딕셔너리
+n = int(input("지도의 크기를 입력하세요."))
+x,y=1,1
+
+plans = list(input("이동 게획을 입력하세요."))
+
+move = {"L":[0,-1],"R":[0,1],"U":[-1,0],"D":[1,0]}
+
+for plan in plans:
+  dx,dy = move[plan]
+  nx = x+dx
+  ny = y+dy
+
+  if nx<1 or nx>n or ny<1 or ny>n:
+    continue
+  else:
+    x=nx
+    y=ny
+
 print(x,y)
 
 
