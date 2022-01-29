@@ -13,3 +13,21 @@ def solution(array, commands):
         i+=1
 
     return answer
+
+# 다른 풀이 1
+def solution(array, commands):
+    answer = []
+    for command in commands:
+      tmp_arr = array[(command[0]-1):command[1]]
+      tmp_arr.sort()
+      num = tmp_arr[command[2]-1]
+      answer.append(num)
+    return answer
+
+# 다른 풀이 2
+def solution(array,commands):
+  answer = []
+  for com in commands:
+    answer.append(sorted(array[com[0]-1:com[1]])[com[2]-1])
+
+  return answer
