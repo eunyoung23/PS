@@ -1,15 +1,3 @@
 #내 풀이
-
-
-
-
-
-
-# 다른 풀이1
-
-
-
-
-
-
-# 다른 풀이2
+def solution(s):
+    return int(s)
