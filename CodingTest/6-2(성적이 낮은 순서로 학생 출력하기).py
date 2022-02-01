@@ -12,7 +12,6 @@ for score in dict:
   print(score[1],end=" ")
 
 
-
 # 풀이1
 N = int(input())
 
