@@ -8,3 +8,4 @@ for money in money_types:
   N %= money
 
 print(count)
+
