@@ -51,3 +51,4 @@ for i in range(N):
       result+=1
       
 print(result)
+
