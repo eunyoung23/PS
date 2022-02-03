@@ -30,3 +30,5 @@ sum += count*data[0] # 가장 큰 수 더하기
 sum += (M-count)*data[1] # 두번째로 큰 수 더하기
 
 print(sum)
+
+
