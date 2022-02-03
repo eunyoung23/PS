@@ -21,3 +21,4 @@ for i in range(N):
   result = max(min_value,result)
 
 print(result) #최종답안 출력
+
