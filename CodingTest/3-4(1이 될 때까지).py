@@ -32,3 +32,4 @@ while True:
 #마지막으로 남은 수에 대해서 1씩 빼기
 count += (N-1)
 print(count)
+
