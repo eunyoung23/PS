@@ -7,7 +7,6 @@
 
 #******10인경우 예외처리해서 처리하기!!
 def solution(dartResult):
-    answer = 0
     stack=[] 
     
     dartResult=dartResult.replace(str(10),'A')
@@ -35,8 +34,5 @@ def solution(dartResult):
             stack.append(10)
         else:
             stack.append(int(dartResult[i]))
-            
-    for i in range(len(stack)):
-        answer+=stack[i]
     
-    return answer
+    return sum(stack)
