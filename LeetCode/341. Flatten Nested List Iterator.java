@@ -1,3 +1,8 @@
+/**
+스택이나 큐를 사용하는 것이 flat 맵을 구현하는 가장 좋은 방법이지 않을까 함.
+-> 자바 스트림의 flatmap도 비슷하지 않을까 싶음.
+**/
+
 public class NestedIterator implements Iterator<Integer> {
     
     Deque<NestedInteger> stack = new LinkedList<>();
