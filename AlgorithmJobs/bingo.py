@@ -40,4 +40,4 @@ for k in range(len(num)):
 
       if cnt==3 or cnt==4:
         print(bingo)
-        exit()
+        exit()   
