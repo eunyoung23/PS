@@ -2,25 +2,26 @@ import heapq
 
 def solution(operations):
     heap=[]
-    max_heap=[]
-    
-    for o in operations:
-        current=o.split()
-        if current[0]=="I":
-            num=int(current[1])
-            heapq.heappush(heap,num)
-            heapq.heappush(max_heap,(num*-1,num))
+
+    for op in operations:
+        o,n=op.split()
+        if o=="I":
+            heapq.heappush(heap,int(n))
         else:
-            if len(heap)==0:
-                pass
-            elif current[1]=="1":
-                max_value=heapq.heappop(max_heap)[1]
-                heap.remove(max_value)
-            elif current[1]=="-1":
-                min_value=heapq.heappop(heap)
-                max_heap.remove((min_value*-1,min_value))
+            if heap:
+                if n=="1":
+                    tmp=[]
+                    while len(heap)>1:
+                        tmp.append(heapq.heappop(heap))
+                    heapq.heappop(heap)
+                    heap=tmp
+                else:
+                    heapq.heappop(heap)
     if heap:
-        return [heapq.heappop(max_heap)[1],heapq.heappop(heap)]
-    else:
-        return [0,0]
+        min_value=heapq.heappop(heap)
+        max_value=min_value
+        while heap:
+            max_value=heapq.heappop(heap)
+        return [max_value,min_value]
+    return [0,0]
     
